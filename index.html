@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b0b0b;--char:#1a1b1a;--char2:#363834;--ink:#f4f4f2;--mute:#8d8f8b;--red:#E13427;--line:#2a2b29}
+:root{--bg:#232422;--char:#2c2d2b;--char2:#363834;--ink:#f4f4f2;--mute:#8d8f8b;--red:#E13427;--line:#393a37}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:Nunito,system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -39,6 +39,10 @@ nav ul a{text-decoration:none}
 .btn.red:hover{background:transparent;color:var(--red)}
 .ph{background:repeating-linear-gradient(135deg,#151615 0 14px,#121312 14px 28px);border:1px dashed #3a3b38;display:flex;align-items:center;justify-content:center;color:#5d5f5a;font-size:11px;letter-spacing:.24em;text-transform:uppercase;text-align:center;padding:20px}
 .hero .ph{aspect-ratio:4/5;transform:translateY(-6%) rotate(1.2deg)}
+.hero-img{margin:0;position:relative}
+.hero-img img{display:block;width:100%;height:auto;filter:grayscale(.15) contrast(1.05);border:1px solid var(--line)}
+.hero-img figcaption{margin-top:12px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+@media(min-width:861px){.hero{grid-template-columns:1.05fr .95fr;align-items:center}.hero-img{transform:rotate(1.2deg)}}
 @media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:110px}.hero .ph{transform:none;max-height:60vh}}
 
 /* manifesto */
@@ -112,6 +116,7 @@ footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;m
 footer .row a{text-decoration:none}
 footer .row a:hover{color:var(--red)}
 .draftbar{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:8px 16px;z-index:30}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:var(--bg) url(/marble.jpg) center/cover no-repeat}
 </style>
 </head>
 <body>
@@ -136,6 +141,10 @@ footer .row a:hover{color:var(--red)}
     <p>Designed to work with your body, not against it. Every piece is placed, scaled and composed for the way you move — customising your character, one considered line at a time.</p>
     <a class="btn red" href="https://www.instagram.com/trinity.dollas.tattoo/">DM “BOOK” on Instagram</a>
   </div>
+  <figure class="hero-img">
+    <img src="/studio.jpg" width="720" height="478" alt="Trinity setting up her tattoo bed at Studio 187 Tattoo, Maylands">
+    <figcaption>Studio 187 Tattoo · Maylands</figcaption>
+  </figure>
 </header>
 
 <section class="manifesto">

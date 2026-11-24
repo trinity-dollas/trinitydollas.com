@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b0b0b;--card:#141514;--ink:#f4f4f2;--mute:#8d8f8b;--red:#E13427;--line:#2a2b29}
+:root{--bg:#232422;--card:#2c2d2b;--ink:#f4f4f2;--mute:#8d8f8b;--red:#E13427;--line:#393a37}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);font-family:Nunito,system-ui,sans-serif;font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:inherit}
@@ -37,6 +37,7 @@ li::marker{color:var(--red)}
 strong{font-weight:600}
 footer{text-align:center;margin-top:44px;font-size:12px;color:var(--mute);letter-spacing:.08em}
 footer a{text-decoration:none}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:var(--bg) url(/marble.jpg) center/cover no-repeat}
 </style>
 </head>
 <body>
